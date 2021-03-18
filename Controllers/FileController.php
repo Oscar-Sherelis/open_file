@@ -10,8 +10,11 @@ use Services\IopenFile;
 
 class FileController extends FileModel implements IopenFile
 {
+    // Check if file exists, check file format and open it
+    
     public function openFile()
     {
+    if (file_exists($this->fileName) === true) {
         if (strpos($this->fileName, '.json') !== false) {
             header('Content-Type: application/json');
             $strJsonFileContents = file_get_contents($this->fileName);
@@ -29,7 +32,8 @@ class FileController extends FileModel implements IopenFile
         } elseif (strpos($this->fileName, '.xml')) {
             readfile($this->fileName);
             header('Content-type: text/xml');
-        } else {
+        }
+    } else {
             print "File not found";
         }
     }
