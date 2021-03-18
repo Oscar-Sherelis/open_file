@@ -9,5 +9,3 @@ use Controllers\FileController;
 
 $fileObj = new FileController;
 $fileObj->openFile();
-
-?>
