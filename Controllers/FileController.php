@@ -10,8 +10,9 @@ use Services\IopenFile;
 
 class FileController extends FileModel implements IopenFile
 {
-    // Check if file exists, check file format and open it
-    
+    /**
+     * @return file data as output
+    */
     public function openFile()
     {
     if (file_exists($this->fileName) === true) {
