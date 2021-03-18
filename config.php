@@ -1,3 +1,5 @@
 <?php
 
-define("FILE_NAME", "");
+namespace Config;
+
+const FILE_NAME = "../test.json";
