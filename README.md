@@ -6,7 +6,7 @@
 ## About project
 * MVC, DRY, KISS, SOLID
 * FileModel controller takes data from config file
-* FileController extends File Model and implements IopenFile
+* FileController extends FileModel and implements IopenFile
 * Result in index.php 
 
 ## Instruction
